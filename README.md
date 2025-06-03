@@ -1,7 +1,7 @@
 # app Application Deployment and Containerization
 
 ## Overview
-This project demonstrates the **containerization** of the app application and its **deployment on Kubernetes** using a **CI/CD pipeline** through GitHub Actions. The end goal is to have an automated system that builds the Docker image, pushes it to a container registry, and deploys it to Kubernetes.
+This project demonstrates the **containerization** of the mookube application and its **deployment on Kubernetes** using a **CI/CD pipeline** through GitHub Actions. The end goal is to have an automated system that builds the Docker image, pushes it to a container registry, and deploys it to Kubernetes.
 
 ## Tasks Completed
 
@@ -17,7 +17,7 @@ This project demonstrates the **containerization** of the app application and it
 
 ### 3. **CI/CD Pipeline Implementation (GitHub Actions)**
 - Set up a **GitHub Actions** workflow that automatically:
-  - Builds the Docker image for the app app.
+  - Builds the Docker image for the mookube app.
   - Pushes the Docker image to **Docker Hub** for accessibility.
   
   The **continuous deployment (CD)** portion, which would automatically deploy the app to Kubernetes after the Docker image is pushed, has been omitted for this workflow due to the use of **Minikube**.
@@ -29,7 +29,7 @@ This project demonstrates the **containerization** of the app application and it
 
 ## TLS Configuration for Secure Communication
 
-The **app Application** is secured with **TLS** (HTTPS) using **cert-manager** and **Let's Encrypt** to automate the process of acquiring and renewing SSL/TLS certificates. The setup is as follows:
+The **mookube Application** is secured with **TLS** (HTTPS) using **cert-manager** and **Let's Encrypt** to automate the process of acquiring and renewing SSL/TLS certificates. The setup is as follows:
 
 ### **TLS Ingress Configuration (`tls-configuration.yaml`)**
 
