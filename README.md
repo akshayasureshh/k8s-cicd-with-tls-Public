@@ -28,8 +28,13 @@ This project demonstrates the **containerization** of the mookube application an
 
 ## TLS Configuration for Secure Communication
 
-The **mookube Application** is secured with **TLS** (HTTPS) using **cert-manager** and **Let's Encrypt** to automate the process of acquiring and renewing SSL/TLS certificates. The setup is as follows:
+The **mookube Application** is secured with **TLS** (HTTPS) using a **self-signed certificate**. This allows for encrypted traffic to the application during local development.
 
-### **TLS Ingress Configuration (`tls-configuration.yaml`)**
+###  How TLS is Set Up
 
-This configuration sets up an **Ingress** resource to route traffic securely to the application via HTTPS using TLS certificates issued by **Let’s Encrypt**.
+- A self-signed certificate (`tls.crt` and `tls.key`) was manually generated.
+- A Kubernetes TLS secret (`mookube-tls`) was created using these files:
+
+
+  ```bash
+  kubectl create secret tls mookube-tls --key tls.key --cert tls.crt
