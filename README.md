@@ -33,7 +33,7 @@ The **app Application** is secured with **TLS** (HTTPS) using **cert-manager** a
 
 ### **TLS Ingress Configuration (`tls-configuration.yaml`)**
 
-This configuration sets up an **Ingress** resource to route traffic securely to the application via HTTPS using TLS certificates issued by **Let’s Encrypt**.
+This configuration sets up an **Ingress** resource to route traffic securely to the application via HTTPS using TLS certificates issued by **Let’s Encrypt** .
 
 ```yaml
 apiVersion: networking.k8s.io/v1
