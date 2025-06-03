@@ -3,7 +3,6 @@
 ## Overview
 This project demonstrates the **containerization** of the mookube application and its **deployment on Kubernetes** using a **CI/CD pipeline** through GitHub Actions. The end goal is to have an automated system that builds the Docker image, pushes it to a container registry, and deploys it to Kubernetes.
 
-## Tasks Completed
 
 ### 1. **Dockerization**
 - Created a `Dockerfile` to containerize the app application.
