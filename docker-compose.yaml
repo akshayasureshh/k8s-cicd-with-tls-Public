@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  mookube:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mookube-app
+    ports:
+      - "4499:4499"
+    restart: unless-stopped

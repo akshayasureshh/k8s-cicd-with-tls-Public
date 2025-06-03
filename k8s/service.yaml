@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mookube-service
+spec:
+  selector:
+    app: mookube
+  ports:
+  - port: 80
+    targetPort: 4499
+  type: ClusterIP
