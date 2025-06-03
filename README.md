@@ -34,28 +34,3 @@ The **app Application** is secured with **TLS** (HTTPS) using **cert-manager** a
 ### **TLS Ingress Configuration (`tls-configuration.yaml`)**
 
 This configuration sets up an **Ingress** resource to route traffic securely to the application via HTTPS using TLS certificates issued by **Let’s Encrypt**.
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: app-ingress
-  annotations:
-    kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
-spec:
-  tls:
-  - hosts:
-    - app.local
-    secretName: app-tls
-  rules:
-  - host: app.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: app-service
-            port:
-              number: 80
